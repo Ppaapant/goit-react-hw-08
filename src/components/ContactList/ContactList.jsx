@@ -4,7 +4,7 @@ import { deleteContact } from "../../redux/contacts/operations";
 import Contact from "./Contact";
 
 import { selectLoading, selectError } from "../../redux/contacts/selectors";
-import selectFilteredContacts from "../../redux/filters/slice";
+import { selectFilteredContacts } from "../../redux/filters/slice";
 
 const ContactList = () => {
   const dispatch = useDispatch();
