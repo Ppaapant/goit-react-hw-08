@@ -6,10 +6,10 @@ export default function Navigation() {
     const isLoggedIn = useSelector(selectIsLoggedIn);
     return(
      <nav className={css.nav}>
-        <NavLink className={css.text}>
+        <NavLink className={css.text} to="/">
             Home
         </NavLink>
-      {isLoggedIn && <NavLink className={css.text}>
+      {isLoggedIn && <NavLink className={css.text} to="/contacts">
          Tasks
       </NavLink>}
 

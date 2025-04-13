@@ -3,13 +3,13 @@ import { addContact, deleteContact, fetchContacts } from "./operations";
 
 
 const contactsSlice = createSlice({
-  name: 'contacts',  // Це обов'язкове поле
+  name: 'contacts',  
   initialState: {
     items: [],
     loading: false,
     error: null,
   },
-  reducers: {},  // Ти можеш додати редюсери для синхронних дій тут
+  reducers: {},  
   extraReducers: (builder) => {
     builder
       .addCase(fetchContacts.pending, (state) => {
@@ -19,9 +19,9 @@ const contactsSlice = createSlice({
         state.loading = false;
         state.items = action.payload;
       })
-      .addCase(fetchContacts.rejected, (state) => {
+      .addCase(fetchContacts.rejected, (action,state) => {
         state.loading = false;
-        state.error = true;
+        state.error = action.payload;
       })
       .addCase(addContact.pending, (state) => {
         state.loading = true;
