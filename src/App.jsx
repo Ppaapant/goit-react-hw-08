@@ -5,7 +5,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { refreshUser } from './redux/auth/operations';
 import { selectIsRefreshing } from './redux/auth/selectors';
 import RestrictedRoute from './components/RestrictedRoute';
-import PrivateRoute from './components/PrivatRoute';
+import PrivateRoute from './components/PrivateRoute';
 
 
 
